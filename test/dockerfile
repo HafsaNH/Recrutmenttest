@@ -1,0 +1,5 @@
+FROM gitpod/workspace-full:latest
+
+# Install Node.js and build tools
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs build-essential

@@ -1,0 +1,68 @@
+//== Typography Variable
+$bodyfont: 'Poppins', sans-serif;
+$bodyfont-Size: 14px;
+$baseFontSize: 15px;
+$headingfont: 'Noto Sans JP', sans-serif;
+
+//== Theme Typo Colors
+$bodyfont-Color: #a8a5a5;
+$headingfont-Color: #132522;
+$border-Color: #eee;
+
+//== Theme Color
+$theme-SkinColor: #46b8b2;
+$theme-DarkColor:  #101727;
+$theme-GreyColor: #e2e0e0;
+$theme-WhiteColor: #FFFFFF;
+
+//== Social Media Icons Color
+$facebook: #3B5999;
+$google: #d34836;
+$twitter: #0099ff;
+$pinterest: #CB2028;
+$youtube: #CC332D;
+$reddit: #FF4500;
+$linkedin: #0077B5;
+
+
+// Background Colors
+.bg {
+
+    &-theme-SkinColor {
+      background-color: $theme-SkinColor;
+    }
+  
+    &-theme-DarkColor {
+      background-color: $theme-DarkColor;
+    }
+  
+    &-theme-GreyColor {
+      background-color: $theme-GreyColor;
+    }
+
+    &-theme-WhiteColor {
+      background-color: $theme-WhiteColor;
+    }
+
+  }
+  
+  // Text Colors
+  .text {
+
+    &-theme-SkinColor {
+      color: $theme-SkinColor;
+    }
+  
+    &-theme-DarkColor {
+      color: $theme-DarkColor;
+    }
+  
+    &-theme-GreyColor {
+      color: $theme-GreyColor;
+    }
+
+    &-theme-WhiteColor {
+      color: $theme-WhiteColor;
+    }
+
+  }  

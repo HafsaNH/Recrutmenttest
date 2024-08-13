@@ -1,0 +1,1033 @@
+
+$verdigris: #46B8B2;
+$sidebar-bg: #3e4a5a;
+$dashboard-bg: #2a3b4d;
+$card-bg: #3e4a5a;
+$text-color-light: #c2c7d0;
+$text-color-dark: #333;
+
+.site-mainA {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: $dashboard-bg;
+
+  .dashboardA {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
+    min-height: 800px;
+    flex-direction: column;
+  }
+
+  .sidebarA {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color:$sidebar-bg;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; 
+
+    h2 {
+color: white;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        color: $text-color-light;
+        margin: 15px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding: 10px;
+
+        &.active {
+          background-color: $verdigris;
+          font-weight: bold;
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          color: #fff;
+          background-color: $sidebar-bg;
+        }
+      }
+    }
+  }
+}
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+
+  .performance-overview,
+  .profile-section-A { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  h4{
+    color: white;
+
+  }
+
+  .btn-primary-A {
+    color: #fff; 
+    background-color: $verdigris; // Couleur de fond pour le bouton
+    border: none; // Retirer la bordure si désiré
+    padding: 10px 20px; // Ajouter du padding pour un meilleur look
+    border-radius: 4px; // Ajouter des coins arrondis si désiré
+    cursor: pointer; // Changer le curseur pour pointer
+    font-size: 16px; // Ajuster la taille de la police
+
+
+  .Form-Admin { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 100px;
+    margin-left: 80px;
+    justify-items: center;
+  }
+}
+}
+// Styles pour la section des annonces
+.manage-announcements {
+  margin: 20px;
+
+  // Styles généraux pour la section
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  // Styles pour les boutons
+  .btn-custom {
+    background-color:$verdigris; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $text-color-dark; // Couleur au survol
+    }
+  }
+
+  .btn-delete {
+    background-color: #dc3545; // Couleur personnalisée pour la suppression
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #c82333; // Couleur au survol
+    }
+  }
+  .table-container {
+    margin-top: 20px;
+    background-color: $dashboard-bg;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      overflow: hidden;
+
+      thead {
+        background-color: $sidebar-bg;
+
+        th {
+          padding: 12px;
+          text-align: left;
+          border-bottom: 2px solid #dee2e6;
+          font-weight: 600;
+          color: white;
+          background-color:  $text-color-dark;
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+
+          td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+
+            .btn-group {
+              display: flex;
+              gap: 10px;
+
+              .btn-edit,
+              .btn-block,
+              .btn-duplicate,
+              .btn-substitute {
+                background-color: #17a2b8; 
+                color: #fff;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                  background-color: #138496; // Couleur au survol
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Styles pour les formulaires de création et modification
+  .form-container {
+    margin-top: 20px;
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form-label {
+        font-weight: 600;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+
+      button {
+        align-self: flex-start;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+.dashboardA {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statsA {
+  display: flex;
+  gap: 20px;
+  transition: $verdigris 0.3s ease, transform 0.3s ease;
+  
+
+}
+
+
+
+
+.chartsA {
+  display: flex;
+  flex-wrap: wrap; // Permet aux graphiques de passer à la ligne si nécessaire
+  gap: 20px; // Ajuste l'espacement entre les graphiques
+  margin-bottom: 20px; // Marge en dessous du conteneur des graphiques
+
+  .bar-chart,
+  .doughnut-chartA {
+    flex: 1;
+    min-width: 300px; // Largeur minimale pour garantir que les graphiques sont lisibles
+    max-width: 100%; // Assure que les graphiques ne dépassent pas la largeur du conteneur
+    height: 400px; // Hauteur fixe pour la cohérence
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre pour une meilleure séparation visuelle
+    border-radius: 8px; // Rayon de bordure pour des coins arrondis
+    background: $sidebar-bg; // Assure que les graphiques ont un fond blanc
+    padding: 10px; // Padding réduit pour s'adapter à la hauteur du graphique
+    box-sizing: border-box; // Inclut le padding et la bordure dans la largeur et la hauteur totales de l'élément
+    display: flex; // Utilise flexbox pour aligner le contenu
+    align-items: center; // Centre le contenu verticalement
+    justify-content: center; // Centre le contenu horizontalement
+  }
+
+  .doughnut-chartA {
+    // Assurez-vous que le conteneur a une hauteur fixe et que le graphique est responsive
+    height: 400px; // Hauteur fixe pour correspondre aux autres graphiques
+    padding: 195px; // Supprime le padding pour éviter tout débordement
+    display: flex; // Utilise flexbox pour aligner le graphique
+    align-items: center; // Centre le graphique verticalement
+    justify-content: center; // Centre le graphique horizontalement
+    margin-left: 0;
+  }
+  
+    .line-chart {
+      flex: 1;
+      min-width: 300px; // Largeur minimale pour garantir que les graphiques sont lisibles
+      max-width: 100%; // Assure que les graphiques ne dépassent pas la largeur du conteneur
+      height: 20px; // Hauteur plus petite pour le graphique en ligne
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre pour une meilleure séparation visuelle
+      border-radius: 8px; // Rayon de bordure pour des coins arrondis
+      background: $sidebar-bg; // Assure que les graphiques ont un fond blanc
+      padding: 10px; // Padding autour du graphique
+      box-sizing: border-box; // Inclut le padding et la bordure dans la largeur et la hauteur totales de l'élément
+      display: flex; // Utilise flexbox pour aligner le graphique
+   
+
+  }
+}
+
+
+
+
+
+
+.stat {
+  background-color: #3e4a5a;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+.statsA :hover{
+  background-color: $verdigris;
+  transform: translateY(-5px);
+
+}
+.stat h2 {
+  margin: 0;
+}
+
+.stat p {
+  margin: 10px 0 0;
+}
+
+.chartsA {
+  display: flex;
+  gap: 20px;
+}
+
+.bar-chart, .doughnut-chartA {
+  flex: 1;
+}
+.statm{
+  .statm{
+    background-color: $verdigris;
+  }
+}.statsm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statm {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; // Assure que les éléments s'adaptent à l'espace disponible
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  .stat {
+    background-color: #3e4a5a;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px; // Assure une largeur minimale pour chaque carte
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: $verdigris; // Assurez-vous que $verdigris est défini dans vos variables SCSS
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    background-color: $text-color-dark; // Utilisation de la variable pour la couleur de fond
+    color: white; // Couleur du texte pour l'en-tête
+
+    th {
+      padding: 15px; // Espacement interne des cellules d'en-tête
+      text-align: left; // Aligne le texte à gauche
+      border-bottom: 2px solid $text-color-dark; // Bordure inférieure pour les lignes d'en-tête
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    td {
+      padding: 17px;
+      border-bottom: 1px solid #ddd;
+      background-color: $text-color-light;
+      
+    }
+  }
+
+
+  .user-actions {
+    display: flex;
+    gap: 10px; 
+    justify-content: center; 
+  }
+
+  .user-actions button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.875rem;
+  }
+
+  .btn-edit {
+    background-color:$verdigris;
+    color: white;
+    &:hover {
+      background-color: $verdigris
+    }
+  }
+
+  .btn-delete {
+    background-color: #f44336; 
+    color: white;
+    &:hover {
+      background-color: #e53935; 
+    }
+  }
+
+  .btn-block {
+    background-color: #ff9800; 
+    color: white;
+    &:hover {
+      background-color: #fb8c00; 
+    }
+  }
+
+  .btn-duplicate {
+    background-color: #2196f3; 
+    color: white;
+    &:hover {
+      background-color: #1e88e5; 
+    }
+  }
+
+  .btn-substitute {
+    background-color: #9c27b0; 
+    color: white;
+    &:hover {
+      background-color: #8e24aa; 
+    }
+  }
+}
+.test-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .test-item {
+    background-color: $dashboard-bg;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px); /* Adaptatif à l'écran */
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+
+    .test-thumbnail {
+      width: 100%;
+      height: 150px; 
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .test-content {
+      padding: 20px;
+
+      .test-title {
+        margin-bottom: 10px;
+
+        h4 {
+          font-size: 18px;
+          color: #fff;
+          margin: 0;
+
+          a {
+            color: $verdigris;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .test-desc {
+        margin-bottom: 15px;
+
+        p {
+          font-size: 14px;
+          color: #666;
+          margin: 0;
+        }
+      }
+
+     // styles.scss
+
+$edit-button-color: #fff; 
+$delete-button-bg: #f44336;
+$delete-button-color: #fff;
+$delete-button-hover-bg: #e53935;
+
+// Style pour les boutons
+.btn-edit-test, .btn-delete-test {
+  border: none;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff; 
+  outline: none;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 25px; 
+
+}
+
+.btn-edit-test {
+  background-color: $verdigris;
+  
+  &:hover {
+    background-color: $verdigris;
+  }
+}
+
+.btn-delete-test {
+  background-color: $delete-button-bg;
+  
+  &:hover {
+    background-color: $delete-button-hover-bg;
+  }
+}
+
+    }
+  }
+}
+
+
+.test-started-message {
+background-color: #f8f9fa;
+color: $text-color-dark;
+padding: 20px;
+border: 1px solid #dee2e6;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-top: 50px;
+text-align: center;
+
+p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+}
+.messages-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .message-list {
+    list-style-type: none;
+    padding: 0;
+
+    .message-item {
+      background-color: #fff;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        margin: 0;
+        font-size: 18px;
+        color:$text-color-dark
+      }
+
+      p {
+        margin: 5px 0;
+
+        &:first-child {
+          font-size: 12px;
+          color: #777; // Couleur pour la date
+        }
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-top: 10px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: $text-color-dark;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3; // Couleur de survol
+    }
+  }
+}
+.user-connections {
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  thead {
+    background-color:$text-color-dark;
+
+    th {
+      padding: 12px 15px;
+      text-align: left;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 0.95rem;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+        background-color: $text-color-light;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead tr {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 15px;
+
+      td {
+        display: block;
+        text-align: right;
+        font-size: 0.9rem;
+
+        &:before {
+          content: attr(data-label);
+          float: left;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.settings{
+  h1{
+    color: white;
+  }
+}
+.admin button {
+  background-color:$text-color-dark; 
+  color: white;               
+  border: none;              
+  padding: 10px 20px;        
+  font-size: 16px;            
+  border-radius: 4px;         
+  cursor: pointer;            
+  transition: background-color 0.3s ease; 
+  margin-top: 15px;
+  margin-left: 900px;
+  
+  &:hover {
+    background-color:$verdigris; 
+  }
+
+  &:active {
+    background-color: $verdigris; // Couleur de fond lors du clic
+  }
+
+  &:disabled {
+    background-color: #6c757d; 
+    cursor: not-allowed;       
+  }
+
+}
+$form-padding: 20px;
+$form-border-radius: 5px;
+$form-bg-color: #f9f9f9;
+$button-bg-color: #007bff;
+$button-color: #fff;
+$button-hover-bg-color: #0056b3;
+
+.admin .form {
+  max-width: 400px;
+  margin: auto;
+  padding: $form-padding;
+  border-radius: $form-border-radius;
+  background-color: $dashboard-bg;
+  margin-left: 10px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    background-color: $dashboard-bg;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: $form-border-radius;
+
+    &:focus {
+      border-color: $button-bg-color;
+      outline: none;
+    }
+  }
+
+
+}
+
+
+.cvtheque {
+  padding: 20px;
+  background-color: $sidebar-bg;
+}
+h1{
+  color: white;
+}
+.cvtheque__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cvtheque__search,
+.cvtheque__filter {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.cvtheque__input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.cvtheque__button {
+  background-color:$verdigris;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cvtheque__button:hover {
+  background-color: $dashboard-bg;
+}
+
+.cvtheque__select {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.cvtheque__results {
+  margin-top: 20px;
+}
+
+.cvtheque__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cvtheque__item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cvtheque__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cvtheque__pagination-button {
+  background-color: $verdigris;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.cvtheque__pagination-button:hover {
+  background-color: $verdigris;
+}
+.main-contentM {
+  padding: 20px;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .user-section {
+    .user-actions {
+      margin-bottom: 15px;
+
+      .btn-create {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color:$verdigris;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $sidebar-bg;
+        }
+
+        &:active {
+          background-color: #1e7e34;
+        }
+      }
+    }
+  }
+}
+
+$border-color: #ddd;
+$text-color: #fff;
+
+// Style the button
+.btn-create {
+  background-color: $verdigris;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  // On hover
+  &:hover {
+    background-color: $sidebar-bg;
+    transform: scale(1.05);
+  }
+
+  // On focus
+  &:focus {
+    outline: none;
+  }
+}
+
+// Style the form elements
+#creatrecruter {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $sidebar-bg;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mb-3 {
+    margin-bottom: 15px;
+  }
+
+  // Style the labels
+  .form-label {
+    color: #333;
+  }
+
+  // Style the input fields
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+    color: #333;
+  }
+}

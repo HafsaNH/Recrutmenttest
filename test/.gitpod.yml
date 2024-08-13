@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      nvm install 14
+      nvm use 14
+      npm install
+    command: npm start
+
+ports:
+  - port: 3000
+    onOpen: open-preview
