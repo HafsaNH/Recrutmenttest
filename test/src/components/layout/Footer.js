@@ -84,7 +84,7 @@ export class Footer extends Component {
                                         </div>
                                     </div>
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/contact_01'}>Request A Free Quote</a>
+                                    href={process.env.PUBLIC_URL + '/login'}>Aplly Now!</a>
                                 </div>
                             </div>
                             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
@@ -93,20 +93,20 @@ export class Footer extends Component {
                                     <ul className="widget-post ttm-recent-post-list">
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
+                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_grid'}>business</a></div>
                                                 <a href={process.env.PUBLIC_URL + '/blog_details'}>Are meetings falling too flat? Try these 10 tips</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
+                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_grid'}>business</a></div>
                                                 <a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fit In The Workplace?</a>
+                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_grid'}>business</a></div>
+                                                <a href={process.env.PUBLIC_URL + '/blog_grid'}>Shame: Does It Fit In The Workplace?</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -136,7 +136,7 @@ export class Footer extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 col-md-6">
-                                <span className="copyright">Copyright © 2021 <a href={process.env.PUBLIC_URL + '/'}>Recrute</a>. All rights reserved.
+                                <span className="copyright">Copyright © 2024 <a href={process.env.PUBLIC_URL + '/'}>Recrute</a>. All rights reserved.
                                 </span>
                                 <ul className="footer-nav-menu">
                                     <li><a href={process.env.PUBLIC_URL + '/'}>Privacy & Policy</a></li>

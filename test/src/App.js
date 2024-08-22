@@ -29,14 +29,14 @@ import Candidate_list from './pages/Candidate_list';
 import Candidate_details from './pages/Candidate_details';
 import Login from './pages/Login';
 import Register from './pages/Register';
-
-import ProfilCandidat from './pages/ProfilCondidat';
-
-import recruteur  from './pages/recruteur';
 import ScrollToTop from './components/layout/Gotop';
-import AdminDashboard from './pages/AdminDashboard'; 
-
-import AdminDashboard2 from './pages/AdminDashboard2';
+import CondidatDashboard from './pages/CondidatDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import RecruteurDashboard from './pages/RecruteurDashboard';
+import TestPage from './pages/TestPage';
+import LanguageTest from './components/tests/LanguageTest';
+import PersonalityTest from './components/tests/PersonalityTest';
+import CompetenceTest from './components/tests/CompetenceTest';
 function App() {
  
   return (
@@ -66,10 +66,17 @@ function App() {
         <Route exact path={`${process.env.PUBLIC_URL + '/Candidate_details'}`} component={ Candidate_details } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Login'}`} component={ Login } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Register'}`} component={ Register } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/ProfilCondidat'}`} component={ ProfilCandidat } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/recruteur'}`} component={ recruteur } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/AdminDashboard'}`} component={ AdminDashboard } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/AdminDashboard2'}`} component={ AdminDashboard2 } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/RecruteurDashboard'}`} component={ RecruteurDashboard} /> 
+        <Route exact path={`${process.env.PUBLIC_URL + '/CondidatDashboard'}`} component={ CondidatDashboard} />
+        <Route exact path={`${process.env.PUBLIC_URL + '/AdminDashboard'}`} component={ AdminDashboard} />
+        <Route exact path={`${process.env.PUBLIC_URL + '/TestPage'}`} component={ TestPage} />
+        <Route exact path={`${process.env.PUBLIC_URL + '/LanguageTest'}`} component={ LanguageTest} />
+        <Route path="/language-test" component={LanguageTest} />
+        <Route path="/personality-test" component={PersonalityTest} />
+        <Route path="/competence-test" component={CompetenceTest} />
+
+
+
 
         <ScrollToTop />
       </Router>

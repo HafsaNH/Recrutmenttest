@@ -1,0 +1,139 @@
+.language-test {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+  
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+  
+      h1 {
+        font-size: 2rem;
+        color: #011936; // Couleur sombre pour le titre
+        margin: 0;
+        user-select: none; // Empêche la sélection du texte
+      }
+  
+      .score {
+        font-size: 1.25rem;
+        margin-top: 10px;
+        color: #333;
+  
+        span {
+          font-weight: bold;
+          color: #46B8B2; // Couleur claire pour le score
+          user-select: none; // Empêche la sélection du texte
+        }
+      }
+    }
+  
+    .timer {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #011936; // Couleur sombre pour le timer
+      user-select: none; // Empêche la sélection du texte
+    }
+  
+    .questions-container {
+      .question {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+        p {
+          font-size: 1.125rem;
+          margin-bottom: 10px;
+          color: #011936; // Couleur sombre pour les questions
+          user-select: none; // Empêche la sélection du texte
+        }
+  
+        input[type="radio"] {
+          display: none;
+  
+          &:checked + label {
+            background: #46B8B2; // Couleur pour la réponse sélectionnée
+            color: #fff;
+          }
+        }
+  
+        label {
+          display: block;
+          padding: 8px 12px;
+          margin: 5px 0;
+          border-radius: 4px;
+          background: #f1f1f1;
+          cursor: pointer;
+          transition: background 0.3s ease, color 0.3s ease;
+  
+          &:hover {
+            background: #007bff;
+            color: #fff;
+          }
+  
+          &.correct {
+            background: #28a745; // Couleur pour les réponses correctes
+            color: #fff;
+          }
+  
+          &.incorrect {
+            background: #dc3545; // Couleur pour les réponses incorrectes
+            color: #fff;
+          }
+        }
+  
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 10px;
+          border: 1px solid #46B8B2; // Couleur de la bordure des zones de texte
+          border-radius: 4px;
+          resize: none;
+          font-size: 1rem;
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  
+    .submit-btn, .restart-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 1.25rem;
+      color: #fff; // Texte blanc pour contraste
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+  
+      &.submit-btn {
+        background: #46B8B2; // Couleur principale pour le bouton Soumettre
+  
+        &:hover {
+          background: #3e9f97; // Légère variation pour survol
+        }
+      }
+  
+      &.restart-btn {
+        background: #011936; // Couleur principale pour le bouton Reprendre le Test
+  
+        &:hover {
+          background: #010f1f; // Légère variation pour survol
+        }
+      }
+  
+      &:active {
+        transform: scale(0.98); // Effet de clic
+      }
+    }
+  }
+  

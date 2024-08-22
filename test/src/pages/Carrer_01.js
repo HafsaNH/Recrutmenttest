@@ -389,7 +389,7 @@ export class Carrer_01 extends Component {
                                         </div>
                                         <div className="apply-block">
                                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                               href={process.env.PUBLIC_URL + '/login'}>Apply Now</a>
+                                               href={process.env.PUBLIC_URL + '/login'}></a>
                                         </div>
                                     </div>
                                 </div>

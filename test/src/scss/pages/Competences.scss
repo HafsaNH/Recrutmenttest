@@ -1,0 +1,128 @@
+.competence-test {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+  
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+  
+      h1 {
+        font-size: 2rem;
+        color: #011936; 
+        margin: 0;
+        user-select: none;
+      }
+  
+      .score {
+        font-size: 1.25rem;
+        margin-top: 10px;
+        color: #333;
+  
+        span {
+          font-weight: bold;
+          color: #46B8B2; 
+          user-select: none; 
+        }
+      }
+    }
+  
+    .timer {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #011936; 
+      user-select: none; 
+    }
+  
+    .questions-container {
+      .question {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+        p {
+          font-size: 1.125rem;
+          margin-bottom: 10px;
+          color: #011936; 
+          user-select: none; 
+        }
+  
+        input[type="radio"] {
+          display: none;
+  
+          &:checked + label {
+            background: #46B8B2; 
+            color: #fff;
+          }
+        }
+  
+        label {
+          display: block;
+          padding: 8px 12px;
+          margin: 5px 0;
+          border-radius: 4px;
+          background: #f1f1f1;
+          cursor: pointer;
+          transition: background 0.3s ease, color 0.3s ease;
+  
+          &:hover {
+            background: #007bff;
+            color: #fff;
+          }
+  
+          &.correct {
+            background: #28a745; 
+            color: #fff;
+          }
+  
+          &.incorrect {
+            background: #dc3545; 
+            color: #fff;
+          }
+        }
+      }
+    }
+  
+    .submit-btn, .restart-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 1.25rem;
+      color: #fff; 
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+  
+      &.submit-btn {
+        background: #46B8B2; 
+  
+        &:hover {
+          background: #3e9f97; 
+        }
+      }
+  
+      &.restart-btn {
+        background: #011936; 
+  
+        &:hover {
+          background: #010f1f; 
+        }
+      }
+  
+      &:active {
+        transform: scale(0.98); 
+      }
+    }
+  }
+  

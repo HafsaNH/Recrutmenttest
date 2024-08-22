@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dashboard</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindexteurtrurteur">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+
+        <!-- Flatpickr -->
+        <link type="text/css"
+              href="assets/css/vendor-flatpickr.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/vendor-flatpickr.rtl.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/vendor-flatpickr-airbnb.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/vendor-flatpickr-airbnb.rtl.css"
+              rel="stylesheet">
+
+        <!-- Vector Maps -->
+        <link type="text/css"
+              href="assets/vendor/jqvmap/jqvmap.min.css"
+              rel="stylesheet">
+
+              <style>
+                body {
+                    font-family: 'Poppins', sans-serif; /* Apply the new font */
+                }
+                .logo-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: relative;
+                    padding: 10px;
+                }
+                .logo-text {
+                    font-size: 21px; /* Reduced by 4px */
+                    font-weight: bold;
+                    color: #000; /* Black color */
+                    letter-spacing: 1.8px; /* Adjusted for new font size */
+                    margin-bottom: 0px;
+                    line-height: 1.2;
+                }
+                .highlight {
+                    color: #66b3ba; /* Teal color for the 'E' */
+                }
+                .subtitle {
+                    font-size: 8px; /* Reduced by 4px */
+                    color: #0c0c0c; /* Dark grey color */
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1px; /* Adjusted for new font size */
+                    position: absolute;
+                    bottom: -10px;
+                    right: 0;
+                    text-align: right;
+                    white-space: nowrap;
+                    line-height: 2.9; /* Minimized line height to reduce space */
+                }
+                .home-link {
+                    text-decoration: none;
+                }
+            </style>
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <div id="header"
+                 class="mdk-header js-mdk-header m-0"
+                 data-fixed>
+                <div class="mdk-header__content">
+
+                    <div class="navbar navbar-expand-sm navbar-main navbar-dark bg-dark  pr-0"
+                         id="navbar"
+                         data-primary>
+                        <div class="container-fluid p-0">
+
+                            <!-- Navbar toggler -->
+
+                            <button class="navbar-toggler navbar-toggler-right d-block d-lg-none"
+                                    type="button"
+                                    data-toggle="sidebar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Navbar Brand -->
+                            <a class="home-link" href="indexteurtrurteur.html" title="Recrute" rel="home">
+                                <div class="logo-container">
+                                    <div class="logo-text">
+                                        LE RECRUT<span class="highlight">E</span>UR
+                                    </div>
+                                </div>
+                            </a>
+
+                            <form class="search-form d-none d-sm-flex flex"
+                                  action="indexteurtrurteur.html">
+                                <button class="btn"
+                                        type="submit"><i class="material-icons">search</i></button>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Search">
+                            </form>
+
+                            <ul class="nav navbar-nav ml-auto d-none d-md-flex">
+                                <li class="nav-item dropdown">
+                                    <a href="#notifications_menu"
+                                       class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       data-caret="false">
+                                        <i class="material-icons nav-icon navbar-notifications-indicator">notifications</i>
+                                    </a>
+                                    <div id="notifications_menu"
+                                         class="dropdown-menu dropdown-menu-right navbar-notifications-menu">
+                                        <div class="dropdown-item d-flex align-items-center py-2">
+                                            <span class="flex navbar-notifications-menu__title m-0">Notifications</span>
+                                            <a href="javascript:void(0)"
+                                               class="text-muted"><small>Clear all</small></a>
+                                 </div>
+                                    </li>
+                                    </ul>
+
+                            <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
+                                <li class="nav-item dropdown">
+                                    <a href="#account_menu"
+                                       class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       data-caret="false">
+                                        <span class="mr-1 d-flex-inline">
+                                            <span class="text-light">Adrian D.</span>
+                                        </span>
+                                        <img src="assets/images/avatar/demi.png"
+                                             class="rounded-circle"
+                                             width="32"
+                                             alt="Frontted">
+                                    </a>
+                                    <div id="account_menu"
+                                         class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-item-text dropdown-item-text--lh">
+                                            <div><strong>Adrian Demian</strong></div>
+                                            <div class="text-muted">@adriandemian</div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item active"
+                                           href="indexteurtrurteur.html"><i class="material-icons">dvr</i> Dashboard</a>
+                                        <a class="dropdown-item"
+                                           href="profile.html"><i class="material-icons">account_circle</i> My profile</a>
+                                        <a class="dropdown-item"
+                                           href="edit-account.html"><i class="material-icons">edit</i> Edit account</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item"
+                                           href="login.html"><i class="material-icons">exit_to_app</i> Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading d-flex align-items-end">
+                                <div class="flex">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li class="breadcrumb-item active"
+                                                aria-current="page">Dashboard</li>
+                                        </ol>
+                                    </nav>
+                                    <h1 class="m-0"> Condidate Dashboard</h1>
+                                </div>
+                                <div class="flatpickr-wrapper ml-3">
+                                    <div id="recent_orders_date"
+                                         data-toggle="flatpickr"
+                                         data-flatpickr-wrap="true"
+                                         data-flatpickr-mode="range"
+                                         data-flatpickr-alt-format="d/m/Y"
+                                         data-flatpickr-date-format="d/m/Y">
+                                        <a href="javascript:void(0)"
+                                           class="link-date"
+                                           data-toggle>13/03/2018 to 20/03/2018</a>
+                                        <input class="flatpickr-hidden-input"
+                                               type="hidden"
+                                               value="13/03/2018 to 20/03/2018"
+                                               data-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid page__container">
+                            <div class="row card-group-row">
+                                <div class="col-lg-4 col-md-6 card-group-row__col">
+                                    <div class="card card-group-row__card">
+                                        <div class="card-body d-flex flex-row align-items-center flex-0 border-bottom">
+                                            <div class="flex">
+                                                <div class="card-header__title mb-2">Profile Views</div>
+                                                <div class="text-amount">42</div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="card-body flex-0">
+                                            <!-- You can add more details here if needed -->
+                                        </div>
+                                        <div class="card-body text-muted flex d-flex align-items-center">
+                                            <div class="chart w-100" style="height: 200px;">
+                                                <canvas id="profileViewsChart">
+                                                    <span style="font-size: 1rem;"><strong>Profile Views</strong> chart goes here.</span>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 card-group-row__col">
+                                    <div class="card card-group-row__card">
+                                        <div class="card-body d-flex flex-row align-items-center flex-0 border-bottom">
+                                            <div class="flex">
+                                                <div class="card-header__title mb-2">CV Downloads</div>
+                                                <div class="text-amount">87</div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="card-body text-muted flex d-flex align-items-center">
+                                            <div class="chart w-100" style="height: 250px;">
+                                                <canvas id="cvDownloadsChart"  width="400" height="200px">
+                                                    <span style="font-size: 1rem;"><strong>CV Downloads</strong> chart goes here.</span>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 card-group-row__col">
+                                    <div class="card card-group-row__card">
+                                        <div class="card-body d-flex flex-row align-items-center flex-0 border-bottom">
+                                            <div class="flex">
+                                                <div class="card-header__title mb-2">Application Trends Over Time</div>
+                                            </div>
+                                          
+                                        </div>
+                                        <div class="card-body text-muted flex d-flex align-items-center">
+                                            <div class="chart w-100" style="height: 250px;">
+                                                <canvas id="applicationTrendsChart">
+                                                    <span style="font-size: 1rem;"><strong>Application Trends Over Time</strong> chart goes here.</span>
+                                                </canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="card-header bg-white d-flex align-items-center">
+                                            <h4 class="card-header__title flex m-0">Application Status</h4>
+                                            <div data-toggle="flatpickr"
+                                                 data-flatpickr-wrap="true"
+                                                 data-flatpickr-static="true"
+                                                 data-flatpickr-mode="range"
+                                                 data-flatpickr-alt-format="d/m/Y"
+                                                 data-flatpickr-date-format="d/m/Y">
+                                                <a href="javascript:void(0)"
+                                                   class="link-date"
+                                                   data-toggle>13/03/2024 <span class="text-muted mx-1">to</span> 20/03/2024</a>
+                                                <input class="flatpickr-hidden-input"
+                                                       type="hidden"
+                                                       value="13/03/2024 to 20/03/2024"
+                                                       data-input>
+                                            </div>
+                                        </div>
+                                        <div class="card-body text-muted">
+                                            <div class="chart-container">
+                                                <canvas id="applicationStatusChart" style="height: 100px;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+
+                                
+                                
+                          
+                               
+                             
+                               
+
+                            <div class="card">
+                                <div class="card-header bg-white d-flex align-items-center justify-content-between">
+                                    <h4 class="card-header__title mb-0">Latest Job </h4>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle text-muted"
+                                           data-caret="false"
+                                           href="#"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true"
+                                           aria-expanded="false"><i class="material-icons icon-16pt">settings</i></a>
+
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="#">
+                                                <i class="material-icons icon-16pt mr-2">settings</i>
+                                                <span>Blog settings</span>
+                                            </a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="#">
+                                                <i class="material-icons icon-16pt mr-2">list</i>
+                                                <span>List view</span>
+                                            </a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="#">
+                                                <i class="material-icons icon-16pt mr-2">grid_on</i>
+                                                <span>Grid view</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body py-2">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 py-2">
+                                            <div class="d-flex flex-column flex-xl-row align-items-center text-center text-xl-left align-items-xl-start">
+                                                <a href=""><img class="img-fluid img-lg-150 img-xl-200 rounded mr-xl-3 mb-3 mb-xl-0"
+                                                         src="assets/images/posts/fabian-irsara-92113.jpg"
+                                                         alt="Blog post image"></a>
+                                                <div class="flex">
+                                                    <h5 class="card-title mb-1"><a href=""
+                                                           class="headings-color">Mobile UI</a></h5>
+                                                    <p class="text-muted mb-2">
+                                                        <small class="mr-1"><a href=""
+                                                               class="text-muted">Steven Doe</a></small>
+                                                        <small>3 hrs ago</small>
+                                                    </p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 py-2">
+                                            <div class="d-flex flex-column flex-xl-row align-items-center text-center text-xl-left align-items-xl-start">
+                                                <a href=""><img class="img-fluid img-lg-150 img-xl-200 rounded mr-xl-3 mb-3 mb-xl-0"
+                                                         src="assets/images/posts/luke-chesser-2347.jpg"
+                                                         alt="Blog post image"></a>
+                                                <div class="flex">
+                                                    <h5 class="card-title mb-1"><a href=""
+                                                           class="headings-color">DevOps Basics</a></h5>
+                                                    <p class="text-muted mb-2">
+                                                        <small class="mr-1"><a href=""
+                                                               class="text-muted">Kevin Short</a></small>
+                                                        <small>15 hrs ago</small>
+                                                    </p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 py-2">
+                                            <div class="d-flex flex-column flex-xl-row align-items-center text-center text-xl-left align-items-xl-start">
+                                                <a href=""><img class="img-fluid img-lg-150 img-xl-200 rounded mr-xl-3 mb-3 mb-xl-0"
+                                                         src="assets/images/posts/thought-catalog-214785.jpg"
+                                                         alt="Blog post image"></a>
+                                                <div class="flex">
+                                                    <h5 class="card-title mb-1"><a href=""
+                                                           class="headings-color">New VueJS Launch</a></h5>
+                                                    <p class="text-muted mb-2">
+                                                        <small class="mr-1"><a href=""
+                                                               class="text-muted">Andrew Robles</a></small>
+                                                        <small>22 hrs ago</small>
+                                                    </p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 py-2">
+                                            <div class="d-flex flex-column flex-xl-row align-items-center text-center text-xl-left align-items-xl-start">
+                                                <a href=""><img class="img-fluid img-lg-150 img-xl-200 rounded mr-xl-3 mb-3 mb-xl-0"
+                                                         src="assets/images/posts/linkedin-sales-navigator-402873.jpg"
+                                                         alt="Blog post image"></a>
+                                                <div class="flex">
+                                                    <h5 class="card-title mb-1"><a href=""
+                                                           class="headings-color">E-Commerce Analytics</a></h5>
+                                                    <p class="text-muted mb-2">
+                                                        <small class="mr-1"><a href=""
+                                                               class="text-muted">Tara Smith</a></small>
+                                                        <small>1 day ago</small>
+                                                    </p>
+                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                                          
+
+                             
+                                        
+                                    
+                                      
+                                 
+                  
+                    <!-- // END drawer-layout__content -->
+
+                    <div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start">
+                        <div class="mdk-drawer__content">
+                            <div class="sidebar sidebar-light sidebar-left sidebar-p-t" data-perfect-scrollbar>
+                                <div class="sidebar-heading">Menu</div>
+                                <ul class="sidebar-menu">
+                                    <li class="sidebar-menu-item active open">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboard_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dashboard</i>
+                                            <span class="sidebar-menu-text">Dashboard</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse show" id="dashboard_menu">
+                                            <li class="sidebar-menu-item active">
+                                                <a class="sidebar-menu-button" href="indexteurtrurteur.html">
+                                                    <span class="sidebar-menu-text">Overview</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#profile_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person</i>
+                                            <span class="sidebar-menu-text">Profile</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="profile_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="edit-account.html">
+                                                    <span class="sidebar-menu-text">Edit Profile</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="profile.html">
+                                                    <span class="sidebar-menu-text">View Profile</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#job_search_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">search</i>
+                                            <span class="sidebar-menu-text">Job Search</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="job_search_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="job-search.html">
+                                                    <span class="sidebar-menu-text">Find Jobs</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>                    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#applications_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">folder</i>
+                                            <span class="sidebar-menu-text">Applications</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="applications_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="myApplication.html">
+                                                    <span class="sidebar-menu-text">My Applications</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#services_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">build</i>
+                                            <span class="sidebar-menu-text">My Services</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="services_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="services.html">
+                                                    <span class="sidebar-menu-text">Manage Services</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#tests_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">check_circle</i>
+                                            <span class="sidebar-menu-text">Tests</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="tests_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="/testPage"> 
+                                                    <span class="sidebar-menu-text">Take Tests</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                             
+
+                              
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'indexteurtrurteur.html',
+      'fixed': 'fixed-dashboard.html',
+      'fluid': 'fluid-dashboard.html',
+      'mini': 'mini-dashboard.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="assets/js/toggle-check-all.js"></script>
+        <script src="assets/js/check-selected-row.js"></script>
+        <script src="assets/js/dropdown.js"></script>
+        <script src="assets/js/sidebar-mini.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- Global Settings -->
+        <script src="assets/js/settings.js"></script>
+
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/moment-range.js"></script>
+
+        <!-- Chart.js -->
+        <script src="assets/vendor/Chart.min.js"></script>
+
+        <!-- App Charts JS -->
+        <script src="assets/js/charts.js"></script>
+        <script src="assets/js/chartjs-rounded-bar.js"></script>
+
+        <!-- Chart Samples -->
+        <script src="assets/js/page.dashboard.js"></script>
+        <script src="assets/js/progress-charts.js"></script>
+
+        <!-- Vector Maps -->
+        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="assets/js/vector-maps.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Données pour le graphique "Profile Views"
+        const profileViewsData = {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'], // Étiquettes pour l'axe X
+            datasets: [
+                {
+                    label: 'Profile Views',
+                    backgroundColor: '#46B8B2',
+                    borderColor: '#46B8B2',
+                    borderWidth: 1,
+                    hoverBackgroundColor: '#3e4a5a',
+                    hoverBorderColor: '#3e4a5a',
+                    data: [10, 20, 30, 40], // Valeurs pour l'axe Y
+                },
+            ],
+        };
+
+        // Configuration du graphique
+        const profileViewsConfig = {
+            type: 'bar', // Type de graphique (bar, line, pie, etc.)
+            data: profileViewsData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Views'
+                        }
+                    }
+                }
+            },
+        };
+
+        // Création du graphique
+        const ctxProfileViews = document.getElementById('profileViewsChart').getContext('2d');
+        new Chart(ctxProfileViews, profileViewsConfig);
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Données pour le graphique "CV Downloads"
+        const cvDownloadsData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Étiquettes pour l'axe X
+            datasets: [
+                {
+                    label: 'CV Downloads',
+                    borderColor: '#46B8B2',
+                    backgroundColor: 'rgba(70, 184, 178, 0.2)',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#46B8B2',
+                    data: [12, 19, 7, 5, 14, 18, 10], // Valeurs pour l'axe Y
+                    fill: true,
+                },
+            ],
+        };
+
+        // Configuration du graphique
+        const cvDownloadsConfig = {
+            type: 'line', // Type de graphique (line, bar, pie, etc.)
+            data: cvDownloadsData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Downloads'
+                        }
+                    }
+                }
+            },
+        };
+
+        // Création du graphique
+        const ctxCvDownloads = document.getElementById('cvDownloadsChart').getContext('2d');
+        new Chart(ctxCvDownloads, cvDownloadsConfig);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Données pour le graphique "Application Trends Over Time"
+        const applicationTrendsData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Étiquettes pour l'axe X
+            datasets: [
+                {
+                    label: 'Applications',
+                    backgroundColor: 'rgba(70, 184, 178, 0.6)',
+                    borderColor: '#46B8B2',
+                    borderWidth: 2,
+                    data: [15, 25, 10, 30, 20, 35, 25], // Valeurs pour l'axe Y
+                },
+            ],
+        };
+
+        // Configuration du graphique
+        const applicationTrendsConfig = {
+            type: 'bar', // Type de graphique (bar, line, pie, etc.)
+            data: applicationTrendsData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Applications'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw;
+                            }
+                        }
+                    }
+                }
+            },
+        };
+
+        // Création du graphique
+        const ctxApplicationTrends = document.getElementById('applicationTrendsChart').getContext('2d');
+        new Chart(ctxApplicationTrends, applicationTrendsConfig);
+    });
+</script>
+<script>
+    const ctx = document.getElementById('applicationStatusChart').getContext('2d');
+new Chart(ctx, {
+    type: 'pie', // Pie chart type
+    data: {
+        labels: ['Accepted', 'Rejected', 'No Response'],
+        datasets: [{
+            label: 'Application Status',
+            data: [15, 5, 10], // Example data, adjust to your actual data
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 205, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 205, 86, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw;
+                    }
+                }
+            }
+        }
+    }
+});
+
+</script>
+
+    </body>
+
+</html>
