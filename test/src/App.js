@@ -1,15 +1,13 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './css/vendor/flaticon.css';
 import './css/vendor/fontawesome.min.css';
 import './css/vendor/themify-icons.css';
-
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import Home3 from './pages/Home3';
-
 import About_us from './pages/About_us';
 import Services from './pages/Services';
 import Services_details from './pages/Services_details';
@@ -37,17 +35,12 @@ import TestPage from './pages/TestPage';
 import LanguageTest from './components/tests/LanguageTest';
 import PersonalityTest from './components/tests/PersonalityTest';
 import CompetenceTest from './components/tests/CompetenceTest';
-function App() {
- 
-  return (
-    <div className="page">
-      <Router> 
-        
+function App() {return (<div className="page">
+      <Router>
         <Route exact path={`${process.env.PUBLIC_URL + '/'}`} component={ Home } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Home2'}`} component={ Home2 } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/Home3'}`} component={ Home3 } /> 
-
-        <Route exact path={`${process.env.PUBLIC_URL + '/About_us'}`} component={ About_us } /> 
+        <Route exact path={`${process.env.PUBLIC_URL + '/Home2'}`} component={ Home2 } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/Home3'}`} component={ Home3 } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/About_us'}`} component={ About_us } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Services'}`} component={ Services } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Services_details'}`} component={ Services_details } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Blog_classic'}`} component={ Blog_classic } />
@@ -66,24 +59,16 @@ function App() {
         <Route exact path={`${process.env.PUBLIC_URL + '/Candidate_details'}`} component={ Candidate_details } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Login'}`} component={ Login } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Register'}`} component={ Register } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/RecruteurDashboard'}`} component={ RecruteurDashboard} /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/CondidatDashboard'}`} component={ CondidatDashboard} />
-        <Route exact path={`${process.env.PUBLIC_URL + '/AdminDashboard'}`} component={ AdminDashboard} />
-        <Route exact path={`${process.env.PUBLIC_URL + '/TestPage'}`} component={ TestPage} />
-        <Route exact path={`${process.env.PUBLIC_URL + '/LanguageTest'}`} component={ LanguageTest} />
-        <Route path="/language-test" component={LanguageTest} />
-        <Route path="/personality-test" component={PersonalityTest} />
-        <Route path="/competence-test" component={CompetenceTest} />
-
-
-
-
+        <Route exact path={`${process.env.PUBLIC_URL + '/RecruteurDashboard'}`} component={ RecruteurDashboard } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/CondidatDashboard'}`} component={ CondidatDashboard } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/AdminDashboard'}`} component={ AdminDashboard } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/TestPage'}`} component={ TestPage } />
+        <Route exact path={`${process.env.PUBLIC_URL + '/LanguageTest'}`} component={ LanguageTest } />
+        <Route path="/language-test" component={ LanguageTest } />
+        <Route path="/personality-test" component={ PersonalityTest } />
+        <Route path="/competence-test" component={ CompetenceTest } />
         <ScrollToTop />
       </Router>
     </div>
   );
-}
-
-export default App;
-
-
+}export default App;
